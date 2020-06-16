@@ -74,7 +74,7 @@ $faq = [
         </div>
     </header>
     <main>
-        <div class="container">
+        <div class="container main">
             <?php
             foreach ($faq as $sezioni) {
             $titolo_sezione = $sezioni["titolo"];
@@ -90,5 +90,22 @@ $faq = [
             };?>
         </div>
     </main>
+    <footer>
+        <div class="container">
+            <div class="footer-left">
+                <ul>
+                    <li>Google</li>
+                    <li>Tutto su Google</li>
+                    <li>Privacy</li>
+                    <li>Termini</li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <select class="language" name="">
+                    <option value="">Italiano</option>
+                </select>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
