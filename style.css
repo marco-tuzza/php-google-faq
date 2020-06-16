@@ -8,6 +8,9 @@
 header {
     height: 100px;
     border-bottom: 1px solid #cbcbcb;
+    position: fixed;
+    width: 100%;
+    background-color: white;
 }
 
 .header-top span:hover, .header-top img:hover, .header-bottom-left ul li:hover, .header-bottom-right span:hover, .header-bottom-right img {
@@ -77,6 +80,27 @@ header {
     color: #5f6368;
 }
 /* /header */
+/* main */
 .container {
-    margin-top: 100px;
+    margin: 0px 280px;
+    padding-top: 100px;
 }
+
+.container h2 {
+    margin-top: 80px;
+    color: #3c4043;
+    font-weight: 500;
+}
+
+.container p {
+    color: #5f6368;
+    font-size: 14px;
+    margin-top: 20px;
+    line-height: 24px;
+}
+
+a {
+    color: #3367d6;
+    text-decoration: none;
+}
+/* /main */
