@@ -39,11 +39,8 @@ $faq = [
 
     ],
 ];
-
-foreach ($faq as $sezioni) {
-    $titolo_sezione = $sezioni["titolo"];
-    $paragrafo_sezione = $sezioni["contenuto"];
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -53,14 +50,18 @@ foreach ($faq as $sezioni) {
     <title>Domande frequenti – Privacy e termini – Google</title>
 </head>
 <body>
-    <h2><?php echo $titolo_sezione;?></h2>
-    <?php if (is_array($paragrafo_sezione)) {
-                foreach ($paragrafo_sezione as $paragrafo) {
-                    echo "<p>" . $paragrafo . "</p>" ;
-                };
-            } else {
-                echo "<p>" . $paragrafo_sezione . "</p>" ;
-            }
-        };?>
+    <?php
+    foreach ($faq as $sezioni) {
+    $titolo_sezione = $sezioni["titolo"];
+    $paragrafo_sezione = $sezioni["contenuto"];
+    echo "<h2>" . $titolo_sezione . "</h2>";
+        if (is_array($paragrafo_sezione)) {
+            foreach ($paragrafo_sezione as $paragrafo) {
+                echo "<p>" . $paragrafo . "</p>" ;
+            };
+        } else {
+            echo "<p>" . $paragrafo_sezione . "</p>" ;
+        };
+    };?>
 </body>
 </html>
