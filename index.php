@@ -48,20 +48,47 @@ $faq = [
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Domande frequenti – Privacy e termini – Google</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <?php
-    foreach ($faq as $sezioni) {
-    $titolo_sezione = $sezioni["titolo"];
-    $paragrafo_sezione = $sezioni["contenuto"];
-    echo "<h2>" . $titolo_sezione . "</h2>";
-        if (is_array($paragrafo_sezione)) {
-            foreach ($paragrafo_sezione as $paragrafo) {
-                echo "<p>" . $paragrafo . "</p>" ;
-            };
-        } else {
-            echo "<p>" . $paragrafo_sezione . "</p>" ;
-        };
-    };?>
+    <header>
+        <div class="header-top">
+            <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_74x24dp.png" alt="">
+            <span>Privacy e termini</span>
+        </div>
+        <div class="header-bottom">
+            <div class="header-bottom-left">
+                <ul>
+                    <li>Introduzione</li>
+                    <li>Norme sulla privacy</li>
+                    <li>Termini di servizio</li>
+                    <li>Tecnologie</li>
+                    <li id="selected">Domande frequenti</li>
+                </ul>
+            </div>
+            <div class="header-bottom-right">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTIq85_6BRPPZxIv3lLDExgVx6VqrSNIqPzBs0TK-i_ZHBtCzDf&usqp=CAU" alt="">
+                <span>pincopallo@gmail.com</span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <?php
+            foreach ($faq as $sezioni) {
+            $titolo_sezione = $sezioni["titolo"];
+            $paragrafo_sezione = $sezioni["contenuto"];
+            echo "<h2>" . $titolo_sezione . "</h2>";
+                if (is_array($paragrafo_sezione)) {
+                    foreach ($paragrafo_sezione as $paragrafo) {
+                        echo "<p>" . $paragrafo . "</p>" ;
+                    };
+                } else {
+                    echo "<p>" . $paragrafo_sezione . "</p>" ;
+                };
+            };?>
+        </div>
+    </main>
 </body>
 </html>
